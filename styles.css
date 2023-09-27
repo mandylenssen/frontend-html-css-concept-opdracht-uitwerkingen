@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -14,11 +16,75 @@
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #5722CD;
+    --light-purple:#F2F0FF;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C;
+    --light-gray: #F3F6F9;
+    --gray: #7A7A7A;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Roboto', 'Arial', 'Helvetia', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--black);
+}
+
+h1, h2, h4, h5, h6 {
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    color: var(--white);
+    font-size:  50px;
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 31px;
+    line-height: 104px;
+}
+
+li {
+    font-size: 22px;
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
+
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    /*border: 2px solid hotpink;*/
+}
+
+.inner-container {
+    width: 910px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*margin: 0 20px;*/
+    /*border: 2px solid greenyellow;*/
+
+}
+
+
+
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -26,6 +92,81 @@
 
 /* --------------- 4.1 Header ------------------------- */
 
+button {
+    background-color: var(--pink);
+    padding: 27px 39px;
+    border-radius: 50px 50px 50px 50px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 1px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.20);
+    border: none;
+    }
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    flex-basis: 441px;
+    list-style: none;
+}
+
+li {
+    flex-basis: auto;
+    height: 30px;
+}
+
+.header-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 92px;
+    width: 1544px;
+}
+
+.header-text-container {
+    margin: 94px;
+    text-align: center;
+
+}
+
+.header-section {
+    background: rgb(72,69,228);
+    background: linear-gradient(133deg, rgba(72,69,228,1) 26%, rgba(87,34,205,1) 100%);
+    color: var(--white);
+    justify-content: space-between;
+    padding-bottom: 180px;
+    position: relative;
+}
+
+.introduction-section {
+    background-color: var(--white);
+    color: var(--purple);
+}
+
+.header-image {
+    background-image:url("assets/squiggle_line_stripe.svg");
+    background-repeat:no-repeat;
+    position: absolute;
+    bottom: 0;
+    width: 83px;
+    height: 107px;
+    /*background-position-x: center;*/
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+
+
+
 /* --------------- 4.2 Introduction ------------------- */
+
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
