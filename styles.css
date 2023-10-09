@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@100;400;700;900&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -8,17 +10,102 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
+        4.3 Articles
+        4.4 Services
+        4.5 Footer
     5. Media Queries
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #5722CD;
+    --light-purple: #F2F0FF;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C;
+    --light-gray: #F3F6F9;
+    --gray: #7A7A7A;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Roboto', 'Arial', 'Helvetia', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--black);
+}
+
+
 /* ------------------------------- 2. Typography ----------------------------------- */
+
+h1, h2, h4, h5, h6 {
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    color: var(--white);
+    font-size: 41px;
+    font-weight: 700;
+}
+
+.header-text-succeed {
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 85px;
+}
+
+
+h4 {
+    color: var(--purple);
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.article__text-container h4 {
+    padding: 7px 0;
+    margin: 87px 0 0 0;
+    color: var(--black);
+}
+
+p {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.header-navigation a {
+    text-decoration: none;
+    color: white;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-container {
+    max-width: 767px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    flex-shrink: 1;
+    flex-grow: 0;
+
+}
+
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -26,6 +113,432 @@
 
 /* --------------- 4.1 Header ------------------------- */
 
+.header-section-container {
+    position: relative;
+    background: rgb(72, 69, 228);
+    background: linear-gradient(133deg, rgba(72, 69, 228, 1) 26%, rgba(87, 34, 205, 1) 100%);
+    color: var(--white);
+    justify-content: space-between;
+    padding-bottom: 160px;
+
+}
+
+.header-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 29px 53px;
+}
+
+.header-navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 361px;
+    list-style: none;
+    flex-shrink: 1;
+    flex-grow: 0;
+
+}
+
+.header-navigation li {
+    flex-basis: auto;
+    height: 30px;
+    flex-shrink: 1;
+}
+
+.header-text-container {
+    margin: 65px;
+    text-align: center;
+}
+
+button {
+    background-color: var(--pink);
+    padding: 23px 39px;
+    border-radius: 50px 50px 50px 50px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-size: 12px;
+    letter-spacing: 1px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.20);
+    border: none;
+}
+
+.header-image {
+    background-image: url("assets/squiggle_line_stripe.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -44px;
+    width: 89px;
+    height: 143px;
+
+}
+
+.project-link {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
 /* --------------- 4.2 Introduction ------------------- */
 
+.introduction-section-text {
+    text-align: center;
+    margin: 88px;
+}
+
+h4 {
+    padding: 17px 0;
+}
+
+.introduction-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--purple);
+}
+
+.contact-us {
+    padding-top: 87px;
+}
+
+.project-link {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+/* --------------- 4.3 Articles ------------------- */
+
+.article-section {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-image {
+    width: 100%;
+}
+
+.article-squiggle-image {
+    margin-top: 24px;
+    width: 57px;
+    height: 6px;
+    background-image: url(./assets/squiggle_line.svg);
+}
+
+.article-photo {
+    flex-basis: 723px;
+    font-size: 0;
+    box-shadow: 0 32px 28px -10px rgba(0, 0, 0, 0.22);
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1263px;
+    margin: 0 20px;
+    padding: 92px 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.article-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 92px 0;
+
+}
+
+.article__text-container {
+    flex-basis: 429px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0 50px 101px 48px;
+}
+
+.article-wrapper:nth-of-type(odd) {
+    flex-direction: row-reverse;
+}
+
+.article__text-container p {
+    margin: 45px 0;
+}
+
+
+/* --------------- 4.4 services ------------------- */
+
+.service-tiles-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 38px;
+    margin: 0 20px;
+    padding: 82px 0;
+}
+
+.service-tile {
+    flex-basis: 343px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 31px 50px 35px;
+    background-color: white;
+    border: 1px solid #5722CD;
+    box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.1);
+    color: #7A7A7A;
+    font-size: 16px;
+}
+
+.service-tile-title {
+    color: #5722CD;
+    font-size: 21px;
+    padding: 13px 0 22px 0;
+}
+
+.service-tile-title {
+    color: var(--purple);
+}
+
+.service-tile p {
+    font-family: 'Roboto', 'Arial', 'Helvetia', sans-serif;
+    color: var(--gray);
+    font-weight: 100;
+    font-size: 14.5px;
+}
+
+.service-tile-icon {
+    width: 69px;
+}
+
+
+/* --------------- 4.6 Form ------------------- */
+
+.outer-form-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    background: #4B49E8;
+    background: linear-gradient(129deg, #4B49E8 0%, #4B49E8 26%, #5722CD 100%);
+    color: white;
+}
+
+.contact-content__form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+.inner-container-form {
+   flex-basis: 767px;
+    margin: 109px 20px 44px 20px;
+}
+
+.inner-container-form p {
+    padding: 25px 0 9px 0;
+    color: var(--white);
+}
+
+.contact-content__form input,
+.contact-content__form textarea {
+    background-color: #ffffff;
+    border: 1px solid #7A7A7A;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    padding: 16px;
+    display: block;
+    font-size: 16px;
+    color: #7A7A7A;
+    width: 100%;
+}
+
+.contact-content__form input::placeholder,
+.contact-content__form textarea::placeholder {
+    color: #7A7A7A;
+    font-size: 15px;
+}
+
+.contact-content__form label {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 19px 0;
+}
+
+.contact-content__form button {
+    margin: 17px;
+    width: 180px;
+    align-self: center;
+}
+
+/* --------------- 4.7 Footer ------------------- */
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
+}
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 576px) {
+
+    h2 {
+        font-size: 38px;
+    }
+
+    .inner-container-form {
+        margin: 125px 20px 44px 20px;
+    }
+
+    .inner-container-form p {
+        padding: 32px 0 17px 0;
+        font-size: 21px;
+    }
+
+    .header-text-succeed {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .introduction-section-text h4 {
+        font-size: 24px;
+        padding: 20px 0;
+    }
+
+
+    .contact-us {
+        font-size: 21px;
+        padding-top: 49px;
+    }
+
+    .header-navigation {
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .header-text-container {
+        margin: 103px 23px;
+    }
+
+    .header-section-container {
+        padding-bottom: 170px;
+    }
+
+    .introduction-section-text {
+        margin: 111px 23px;
+    }
+
+    .article-wrapper,
+    .article-wrapper:nth-of-type(odd) {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .contact-content__form {
+        padding: 5px 0 0 0;
+    }
+
+    .article-photo {
+        flex-basis: auto;
+    }
+
+    .article__text-container {
+        padding: 0 0 58px 0;
+        flex-basis: auto;
+    }
+
+    .article-container h4 {
+        font-size: 35px;
+        margin: 30px 0;
+        padding: 12px 0;
+    }
+
+    .article-container {
+        padding: 107px 0;
+    }
+
+    .article-container p {
+        Font-size: 22px;
+        margin: 51px 0;
+    }
+
+    .service-tiles-wrapper {
+        gap: 43px;
+        padding: 112px 0 56px 0;
+
+    }
+
+    .service-tile-icon {
+        width: 97px;
+    }
+
+    .service-tile p {
+        font-weight: 100;
+        font-size: 17.5px;
+    }
+
+    .service-tile {
+        flex-basis: 415px;
+        padding: 37px 40px 50px 42px
+    }
+    .service-tile-title {
+        color: #5722CD;
+        font-size: 26px;
+        padding: 13px 0 26px 0;
+    }
+
+    .project-link {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+
+    .contact-content__form input,
+    .contact-content__form textarea {
+        padding: 26px;
+        font-size: 16px;
+    }
+
+    .contact-content__form input::placeholder,
+    .contact-content__form textarea::placeholder {
+        font-size: 17px;
+    }
+
+    .contact-content__form label {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 17px 0;
+    }
+
+    .contact-content__form button {
+        margin: 52px;
+        width: 218px;
+    }
+
+    footer {
+        font-size: 15px;
+    }
+}
